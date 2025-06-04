@@ -10,8 +10,9 @@ import org.springframework.web.bind.annotation.RestController
 class GreetingController {
 
     @GetMapping
-    fun greeting(@RequestParam(value = "name", required = false) name: String?): String {
-        return "Hello, $name!"
-    }
+    fun greeting(
+        @RequestParam(value = "name", required = false) name: String?
+    ): String = "Hello, $name!"
+
 
 }
